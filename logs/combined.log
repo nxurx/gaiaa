@@ -1,0 +1,884 @@
+2026-04-07 17:13:30 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-04-07 17:13:30 [info]: Server running in development mode on port 5000
+2026-04-07 17:13:36 [info]: SIGINT received. Shutting down gracefully...
+2026-06-23 23:24:16 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:24:16 [info]: Server running in development mode on port 5000
+2026-06-23 23:24:16 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:24:16 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:24:29 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:24:36 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:24:36 +0000] "GET /health HTTP/1.1" 200 69 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:24:36 [warn]: [POST] /api/auth/login - 401: Invalid username or password.
+2026-06-23 23:24:36 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:24:36 +0000] "POST /api/auth/login HTTP/1.1" 401 59 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:24:51 [warn]: [POST] /api/auth/login - 401: Invalid username or password.
+2026-06-23 23:24:51 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:24:51 +0000] "POST /api/auth/login HTTP/1.1" 401 59 "-" "-"
+2026-06-23 23:25:08 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:25:08 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:25:30 [warn]: [POST] /api/auth/login - 401: Invalid username or password.
+2026-06-23 23:25:30 [http]: ::1 - - [23/Jun/2026:20:25:30 +0000] "POST /api/auth/login HTTP/1.1" 401 59 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:25:42 [warn]: [POST] /api/auth/login - 401: Invalid username or password.
+2026-06-23 23:25:42 [http]: ::1 - - [23/Jun/2026:20:25:42 +0000] "POST /api/auth/login HTTP/1.1" 401 59 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:03 [http]: ::1 - - [23/Jun/2026:20:26:03 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:03 [http]: ::1 - - [23/Jun/2026:20:26:03 +0000] "GET /api/leads?limit=500 HTTP/1.1" 200 49227 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:04 [http]: ::1 - - [23/Jun/2026:20:26:04 +0000] "GET /api/calls?limit=500 HTTP/1.1" 200 23663 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:08 [http]: ::1 - - [23/Jun/2026:20:26:08 +0000] "GET /api/settings/me HTTP/1.1" 200 618 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:11 [http]: ::1 - - [23/Jun/2026:20:26:11 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 200 46 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:11 [http]: ::1 - - [23/Jun/2026:20:26:11 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:17 [http]: ::1 - - [23/Jun/2026:20:26:17 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:17 [http]: ::1 - - [23/Jun/2026:20:26:17 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:38 [http]: ::1 - - [23/Jun/2026:20:26:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:39 [warn]: [POST] /api/settings/notify - 400: Discord is not configured
+2026-06-23 23:26:39 [http]: ::1 - - [23/Jun/2026:20:26:39 +0000] "POST /api/settings/notify HTTP/1.1" 400 55 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:40 [http]: ::1 - - [23/Jun/2026:20:26:40 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:26:59 [http]: ::1 - - [23/Jun/2026:20:26:59 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:01 [http]: ::1 - - [23/Jun/2026:20:27:01 +0000] "GET /api/users?limit=100 HTTP/1.1" 200 612 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:01 [http]: ::1 - - [23/Jun/2026:20:27:01 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:06 [http]: ::1 - - [23/Jun/2026:20:27:06 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:09 [http]: ::1 - - [23/Jun/2026:20:27:09 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:18 [http]: ::1 - - [23/Jun/2026:20:27:18 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:21 [http]: ::1 - - [23/Jun/2026:20:27:21 +0000] "PATCH /api/settings HTTP/1.1" 200 820 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:21 [http]: ::1 - - [23/Jun/2026:20:27:21 +0000] "GET /api/settings/me HTTP/1.1" 200 739 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:24 [http]: ::1 - - [23/Jun/2026:20:27:24 +0000] "POST /api/settings/test-discord HTTP/1.1" 200 60 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:25 [http]: ::1 - - [23/Jun/2026:20:27:25 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:28 [http]: ::1 - - [23/Jun/2026:20:27:28 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:31 [http]: ::1 - - [23/Jun/2026:20:27:31 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:31 [http]: ::1 - - [23/Jun/2026:20:27:31 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:31 [http]: ::1 - - [23/Jun/2026:20:27:31 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:31 [http]: ::1 - - [23/Jun/2026:20:27:31 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:38 [http]: ::1 - - [23/Jun/2026:20:27:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:39 [http]: ::1 - - [23/Jun/2026:20:27:39 +0000] "POST /api/settings/notify HTTP/1.1" 200 75 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:39 [http]: ::1 - - [23/Jun/2026:20:27:39 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:27:54 [http]: ::1 - - [23/Jun/2026:20:27:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:08 [http]: ::1 - - [23/Jun/2026:20:28:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:23 [http]: ::1 - - [23/Jun/2026:20:28:23 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:26 [http]: ::1 - - [23/Jun/2026:20:28:26 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:31 [http]: ::1 - - [23/Jun/2026:20:28:31 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:38 [http]: ::1 - - [23/Jun/2026:20:28:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:45 [http]: ::1 - - [23/Jun/2026:20:28:45 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:45 [http]: ::1 - - [23/Jun/2026:20:28:45 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:45 [http]: ::1 - - [23/Jun/2026:20:28:45 +0000] "GET /api/analytics/overview? HTTP/1.1" 200 2290 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:45 [http]: ::1 - - [23/Jun/2026:20:28:45 +0000] "GET /api/analytics/overview? HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:45 [http]: ::1 - - [23/Jun/2026:20:28:45 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:28:45 [http]: ::1 - - [23/Jun/2026:20:28:45 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:01 [http]: ::1 - - [23/Jun/2026:20:29:01 +0000] "PATCH /api/settings HTTP/1.1" 200 819 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:03 [http]: ::1 - - [23/Jun/2026:20:29:03 +0000] "PATCH /api/settings HTTP/1.1" 200 820 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:08 [http]: ::1 - - [23/Jun/2026:20:29:08 +0000] "GET /api/settings/me HTTP/1.1" 200 739 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:10 [http]: ::1 - - [23/Jun/2026:20:29:10 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:11 [http]: ::1 - - [23/Jun/2026:20:29:11 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:24 [http]: ::1 - - [23/Jun/2026:20:29:24 +0000] "POST /api/settings/notify HTTP/1.1" 200 75 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:27 [http]: ::1 - - [23/Jun/2026:20:29:27 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:39 [http]: ::1 - - [23/Jun/2026:20:29:39 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:29:46 [http]: ::1 - - [23/Jun/2026:20:29:46 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:30:08 [http]: ::1 - - [23/Jun/2026:20:30:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:30:38 [http]: ::1 - - [23/Jun/2026:20:30:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:31:08 [http]: ::1 - - [23/Jun/2026:20:31:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:31:38 [http]: ::1 - - [23/Jun/2026:20:31:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:32:08 [http]: ::1 - - [23/Jun/2026:20:32:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:32:31 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:32:31 [info]: Server running in development mode on port 5000
+2026-06-23 23:32:31 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:32:38 [http]: ::1 - - [23/Jun/2026:20:32:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:32:43 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:32:43 [info]: Server running in development mode on port 5000
+2026-06-23 23:32:43 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:32:50 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:32:50 [info]: Server running in development mode on port 5000
+2026-06-23 23:32:50 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:33:08 [http]: ::1 - - [23/Jun/2026:20:33:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:33:38 [http]: ::1 - - [23/Jun/2026:20:33:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:33:41 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:33:41 [info]: Server running in development mode on port 5000
+2026-06-23 23:33:41 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:34:08 [http]: ::1 - - [23/Jun/2026:20:34:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:34:38 [http]: ::1 - - [23/Jun/2026:20:34:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:35:08 [http]: ::1 - - [23/Jun/2026:20:35:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:35:38 [http]: ::1 - - [23/Jun/2026:20:35:38 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:06 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:36:06 [info]: Server running in development mode on port 5000
+2026-06-23 23:36:06 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:36:08 [http]: ::1 - - [23/Jun/2026:20:36:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:34 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:36:34 [info]: Server running in development mode on port 5000
+2026-06-23 23:36:35 [http]: ::1 - - [23/Jun/2026:20:36:35 +0000] "GET /api/auth/me HTTP/1.1" 200 214 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:35 [http]: ::1 - - [23/Jun/2026:20:36:35 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:35 [http]: ::1 - - [23/Jun/2026:20:36:35 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:35 [http]: ::1 - - [23/Jun/2026:20:36:35 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:36 [http]: ::1 - - [23/Jun/2026:20:36:36 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:36 [http]: ::1 - - [23/Jun/2026:20:36:36 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:36 [http]: ::1 - - [23/Jun/2026:20:36:36 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:36 [http]: ::1 - - [23/Jun/2026:20:36:36 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:36:41 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:36:41 +0000] "GET /health HTTP/1.1" 200 69 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:37:04 [http]: ::1 - - [23/Jun/2026:20:37:04 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:37:05 [http]: ::1 - - [23/Jun/2026:20:37:05 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:37:05 [http]: ::1 - - [23/Jun/2026:20:37:05 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:37:15 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:37:15 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:37:16 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:37:16 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:37:22 [http]: ::1 - - [23/Jun/2026:20:37:22 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:37:35 [http]: ::1 - - [23/Jun/2026:20:37:35 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:37:44 [http]: ::1 - - [23/Jun/2026:20:37:44 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:37:44 [http]: ::1 - - [23/Jun/2026:20:37:44 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:37:52 [warn]: [POST] /api/users - 400: Validation failed
+2026-06-23 23:37:52 [http]: ::1 - - [23/Jun/2026:20:37:52 +0000] "POST /api/users HTTP/1.1" 400 130 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:38:05 [http]: ::1 - - [23/Jun/2026:20:38:05 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:38:35 [http]: ::1 - - [23/Jun/2026:20:38:35 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:38:54 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:39:01 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:39:01 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:39:01 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:39:01 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:39:01 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:39:01 +0000] "GET /health HTTP/1.1" 200 69 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:39:05 [http]: ::1 - - [23/Jun/2026:20:39:05 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:39:29 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:39:29 [info]: Server running in development mode on port 5000
+2026-06-23 23:39:35 [http]: ::1 - - [23/Jun/2026:20:39:35 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:39:54 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:39:54 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:39:54 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:39:54 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:40:05 [http]: ::1 - - [23/Jun/2026:20:40:05 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:35 [http]: ::1 - - [23/Jun/2026:20:40:35 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:55 [http]: ::1 - - [23/Jun/2026:20:40:55 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:55 [http]: ::1 - - [23/Jun/2026:20:40:55 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:55 [http]: ::1 - - [23/Jun/2026:20:40:55 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:55 [http]: ::1 - - [23/Jun/2026:20:40:55 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:55 [http]: ::1 - - [23/Jun/2026:20:40:55 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:55 [http]: ::1 - - [23/Jun/2026:20:40:55 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:56 [http]: ::1 - - [23/Jun/2026:20:40:56 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:40:56 [http]: ::1 - - [23/Jun/2026:20:40:56 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:41:25 [http]: ::1 - - [23/Jun/2026:20:41:25 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:41:55 [http]: ::1 - - [23/Jun/2026:20:41:55 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:23 [http]: ::1 - - [23/Jun/2026:20:42:23 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:24 [http]: ::1 - - [23/Jun/2026:20:42:24 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:24 [http]: ::1 - - [23/Jun/2026:20:42:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:24 [http]: ::1 - - [23/Jun/2026:20:42:24 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:24 [http]: ::1 - - [23/Jun/2026:20:42:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:24 [http]: ::1 - - [23/Jun/2026:20:42:24 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:24 [http]: ::1 - - [23/Jun/2026:20:42:24 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:25 [http]: ::1 - - [23/Jun/2026:20:42:25 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:27 [http]: ::1 - - [23/Jun/2026:20:42:27 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:27 [http]: ::1 - - [23/Jun/2026:20:42:27 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:30 [http]: ::1 - - [23/Jun/2026:20:42:30 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:34 [http]: ::1 - - [23/Jun/2026:20:42:34 +0000] "POST /api/scraper/export-csv HTTP/1.1" 200 1113 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:49 [http]: ::1 - - [23/Jun/2026:20:42:49 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:53 [warn]: [POST] /api/auth/login - 401: Invalid username or password.
+2026-06-23 23:42:53 [http]: ::1 - - [23/Jun/2026:20:42:53 +0000] "POST /api/auth/login HTTP/1.1" 401 59 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:54 [http]: ::1 - - [23/Jun/2026:20:42:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:57 [http]: ::1 - - [23/Jun/2026:20:42:57 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:57 [http]: ::1 - - [23/Jun/2026:20:42:57 +0000] "GET /api/leads?limit=500 HTTP/1.1" 200 49227 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:42:57 [http]: ::1 - - [23/Jun/2026:20:42:57 +0000] "GET /api/calls?limit=500 HTTP/1.1" 200 23663 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:00 [http]: ::1 - - [23/Jun/2026:20:43:00 +0000] "GET /api/users?limit=100 HTTP/1.1" 200 612 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:00 [http]: ::1 - - [23/Jun/2026:20:43:00 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:01 [http]: ::1 - - [23/Jun/2026:20:43:01 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:15 [http]: ::1 - - [23/Jun/2026:20:43:15 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:19 [http]: ::1 - - [23/Jun/2026:20:43:19 +0000] "GET /api/settings/me HTTP/1.1" 200 739 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:24 [http]: ::1 - - [23/Jun/2026:20:43:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:30 [http]: ::1 - - [23/Jun/2026:20:43:30 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:33 [http]: ::1 - - [23/Jun/2026:20:43:33 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:36 [http]: ::1 - - [23/Jun/2026:20:43:36 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:36 [http]: ::1 - - [23/Jun/2026:20:43:36 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:37 [http]: ::1 - - [23/Jun/2026:20:43:37 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:50 [http]: ::1 - - [23/Jun/2026:20:43:50 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:43:54 [http]: ::1 - - [23/Jun/2026:20:43:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:44:20 [http]: ::1 - - [23/Jun/2026:20:44:20 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:44:24 [http]: ::1 - - [23/Jun/2026:20:44:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:44:50 [http]: ::1 - - [23/Jun/2026:20:44:50 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:44:54 [http]: ::1 - - [23/Jun/2026:20:44:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:45:20 [http]: ::1 - - [23/Jun/2026:20:45:20 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:45:24 [http]: ::1 - - [23/Jun/2026:20:45:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:45:50 [http]: ::1 - - [23/Jun/2026:20:45:50 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:45:54 [http]: ::1 - - [23/Jun/2026:20:45:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:46:24 [http]: ::1 - - [23/Jun/2026:20:46:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:46:54 [http]: ::1 - - [23/Jun/2026:20:46:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:47:11 [http]: ::1 - - [23/Jun/2026:20:47:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:47:24 [http]: ::1 - - [23/Jun/2026:20:47:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:47:54 [http]: ::1 - - [23/Jun/2026:20:47:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:48:11 [http]: ::1 - - [23/Jun/2026:20:48:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:48:24 [http]: ::1 - - [23/Jun/2026:20:48:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:48:54 [http]: ::1 - - [23/Jun/2026:20:48:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:49:11 [http]: ::1 - - [23/Jun/2026:20:49:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:49:14 [http]: ::1 - - [23/Jun/2026:20:49:14 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:49:14 [http]: ::1 - - [23/Jun/2026:20:49:14 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:49:15 [http]: ::1 - - [23/Jun/2026:20:49:15 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:49:15 [http]: ::1 - - [23/Jun/2026:20:49:15 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:49:24 [http]: ::1 - - [23/Jun/2026:20:49:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:49:54 [http]: ::1 - - [23/Jun/2026:20:49:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:50:11 [http]: ::1 - - [23/Jun/2026:20:50:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:50:15 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:50:15 [info]: Server running in development mode on port 5000
+2026-06-23 23:50:22 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:50:22 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:50:23 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:50:23 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:50:24 [http]: ::1 - - [23/Jun/2026:20:50:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:50:42 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:50:42 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:50:42 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:50:42 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:50:54 [http]: ::1 - - [23/Jun/2026:20:50:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:51:11 [http]: ::1 - - [23/Jun/2026:20:51:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:51:24 [http]: ::1 - - [23/Jun/2026:20:51:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:51:30 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:51:30 [info]: Server running in development mode on port 5000
+2026-06-23 23:51:37 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:51:37 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:51:54 [http]: ::1 - - [23/Jun/2026:20:51:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:52:11 [http]: ::1 - - [23/Jun/2026:20:52:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:52:24 [http]: ::1 - - [23/Jun/2026:20:52:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:52:29 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:52:29 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:52:48 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:52:48 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:52:54 [http]: ::1 - - [23/Jun/2026:20:52:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:53:11 [http]: ::1 - - [23/Jun/2026:20:53:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:53:24 [http]: ::1 - - [23/Jun/2026:20:53:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:53:54 [http]: ::1 - - [23/Jun/2026:20:53:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:54:11 [http]: ::1 - - [23/Jun/2026:20:54:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:54:24 [http]: ::1 - - [23/Jun/2026:20:54:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:54:54 [http]: ::1 - - [23/Jun/2026:20:54:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:55:11 [http]: ::1 - - [23/Jun/2026:20:55:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:55:18 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:55:18 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:55:24 [http]: ::1 - - [23/Jun/2026:20:55:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:55:54 [http]: ::1 - - [23/Jun/2026:20:55:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:56:11 [http]: ::1 - - [23/Jun/2026:20:56:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:56:17 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:56:17 [info]: Server running in development mode on port 5000
+2026-06-23 23:56:24 [http]: ::1 - - [23/Jun/2026:20:56:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:56:24 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:56:24 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:56:54 [http]: ::1 - - [23/Jun/2026:20:56:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:57:00 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:57:00 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:57:08 [http]: ::1 - - [23/Jun/2026:20:57:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:57:08 [http]: ::1 - - [23/Jun/2026:20:57:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:57:08 [http]: ::1 - - [23/Jun/2026:20:57:08 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:57:11 [http]: ::1 - - [23/Jun/2026:20:57:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:57:16 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:57:16 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:57:24 [http]: ::1 - - [23/Jun/2026:20:57:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:57:52 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:57:52 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:57:54 [http]: ::1 - - [23/Jun/2026:20:57:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:09 [http]: ::1 - - [23/Jun/2026:20:58:09 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:09 [http]: ::1 - - [23/Jun/2026:20:58:09 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:10 [http]: ::1 - - [23/Jun/2026:20:58:10 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:11 [http]: ::1 - - [23/Jun/2026:20:58:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:14 [http]: ::1 - - [23/Jun/2026:20:58:14 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:24 [http]: ::1 - - [23/Jun/2026:20:58:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:32 [info]: MongoDB connected: ac-oobh1sh-shard-00-00.dwple5v.mongodb.net
+2026-06-23 23:58:32 [info]: Server running in development mode on port 5000
+2026-06-23 23:58:33 [http]: ::1 - - [23/Jun/2026:20:58:33 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:37 [http]: ::1 - - [23/Jun/2026:20:58:37 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:58:39 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:58:39 +0000] "POST /api/auth/login HTTP/1.1" 200 414 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-23 23:58:54 [http]: ::1 - - [23/Jun/2026:20:58:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:59:11 [http]: ::1 - - [23/Jun/2026:20:59:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:59:24 [http]: ::1 - - [23/Jun/2026:20:59:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-23 23:59:44 [http]: ::ffff:127.0.0.1 - - [23/Jun/2026:20:59:44 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8655"
+2026-06-24 00:00:11 [http]: ::1 - - [23/Jun/2026:21:00:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:00:11 [http]: ::1 - - [23/Jun/2026:21:00:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:00:24 [http]: ::1 - - [23/Jun/2026:21:00:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:00:25 [http]: ::1 - - [23/Jun/2026:21:00:25 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:00:47 [http]: ::1 - - [23/Jun/2026:21:00:47 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:00:54 [http]: ::1 - - [23/Jun/2026:21:00:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:01:11 [http]: ::1 - - [23/Jun/2026:21:01:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:01:24 [http]: ::1 - - [23/Jun/2026:21:01:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:01:34 [http]: ::1 - - [23/Jun/2026:21:01:34 +0000] "POST /api/scraper/start HTTP/1.1" 200 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:01:50 [http]: ::1 - - [23/Jun/2026:21:01:50 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:01:50 [http]: ::1 - - [23/Jun/2026:21:01:50 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:01:54 [http]: ::1 - - [23/Jun/2026:21:01:54 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:02:11 [http]: ::1 - - [23/Jun/2026:21:02:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:02:24 [http]: ::1 - - [23/Jun/2026:21:02:24 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:03:11 [http]: ::1 - - [23/Jun/2026:21:03:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:03:11 [http]: ::1 - - [23/Jun/2026:21:03:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:04:11 [http]: ::1 - - [23/Jun/2026:21:04:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:04:11 [http]: ::1 - - [23/Jun/2026:21:04:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:05:11 [http]: ::1 - - [23/Jun/2026:21:05:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:05:11 [http]: ::1 - - [23/Jun/2026:21:05:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:06:11 [http]: ::1 - - [23/Jun/2026:21:06:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:06:11 [http]: ::1 - - [23/Jun/2026:21:06:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:07:11 [http]: ::1 - - [23/Jun/2026:21:07:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:07:11 [http]: ::1 - - [23/Jun/2026:21:07:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:07:58 [http]: ::1 - - [23/Jun/2026:21:07:58 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:07:58 [http]: ::1 - - [23/Jun/2026:21:07:58 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:08:11 [http]: ::1 - - [23/Jun/2026:21:08:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:08:11 [http]: ::1 - - [23/Jun/2026:21:08:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:11 [http]: ::1 - - [23/Jun/2026:21:09:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:11 [http]: ::1 - - [23/Jun/2026:21:09:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:47 [http]: ::1 - - [23/Jun/2026:21:09:47 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:47 [http]: ::1 - - [23/Jun/2026:21:09:47 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:49 [http]: ::1 - - [23/Jun/2026:21:09:49 +0000] "GET /api/auth/me HTTP/1.1" 200 214 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:49 [http]: ::1 - - [23/Jun/2026:21:09:49 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:49 [http]: ::1 - - [23/Jun/2026:21:09:49 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:49 [http]: ::1 - - [23/Jun/2026:21:09:49 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:49 [http]: ::1 - - [23/Jun/2026:21:09:49 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:49 [http]: ::1 - - [23/Jun/2026:21:09:49 +0000] "GET /api/leads?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:50 [http]: ::1 - - [23/Jun/2026:21:09:50 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:50 [http]: ::1 - - [23/Jun/2026:21:09:50 +0000] "GET /api/calls?limit=500 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:51 [http]: ::1 - - [23/Jun/2026:21:09:51 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 200 46 "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:51 [http]: ::1 - - [23/Jun/2026:21:09:51 +0000] "GET /api/users/69cbfc2e432ce06b93b92058/csv-lists HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:55 [http]: ::1 - - [23/Jun/2026:21:09:55 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:09:55 [http]: ::1 - - [23/Jun/2026:21:09:55 +0000] "GET /api/users?limit=100 HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:10:11 [http]: ::1 - - [23/Jun/2026:21:10:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:10:19 [http]: ::1 - - [23/Jun/2026:21:10:19 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:10:49 [http]: ::1 - - [23/Jun/2026:21:10:49 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:11:11 [http]: ::1 - - [23/Jun/2026:21:11:11 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-06-24 00:11:19 [http]: ::1 - - [23/Jun/2026:21:11:19 +0000] "GET /api/settings/me HTTP/1.1" 304 - "http://127.0.0.1:5173/gaia/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+2026-08-21 00:43:43 [error]: MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.mongodb.net
+2026-08-21 01:34:08 [error]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-08-21 01:40:51 [info]: MongoDB connection skipped (SKIP_MONGODB=true)
+2026-08-21 01:40:51 [info]: Server running in development mode on port 5000
+2026-08-21 01:46:03 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 01:46:03 [info]: Using JSON database for seeding...
+2026-08-21 01:46:04 [info]: ✓ Admin user "admin" created successfully with password "kosomelsisi".
+2026-08-21 01:46:22 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 01:46:22 [info]: Server running in development mode on port 5000
+2026-08-21 01:51:13 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:51:13 [http]: ::1 - - [20/Aug/2026:22:51:13 +0000] "POST /api/auth/login HTTP/1.1" 500 72 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:51:37 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 01:51:37 [info]: Server running in development mode on port 5000
+2026-08-21 01:54:59 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:54:59 [http]: ::1 - - [20/Aug/2026:22:54:59 +0000] "POST /api/auth/login HTTP/1.1" 500 72 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:55:04 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:55:04 [http]: ::1 - - [20/Aug/2026:22:55:04 +0000] "POST /api/auth/login HTTP/1.1" 500 72 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:55:12 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:55:12 [http]: ::1 - - [20/Aug/2026:22:55:12 +0000] "POST /api/auth/login HTTP/1.1" 500 72 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:55:56 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 01:55:56 [info]: Server running in development mode on port 5000
+2026-08-21 01:56:54 [warn]: [POST] /api/auth/login - 401: Invalid username or password.
+2026-08-21 01:56:54 [http]: ::1 - - [20/Aug/2026:22:56:54 +0000] "POST /api/auth/login HTTP/1.1" 401 59 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:57:01 [warn]: [POST] /api/auth/login - 401: Invalid username or password.
+2026-08-21 01:57:01 [http]: ::1 - - [20/Aug/2026:22:57:01 +0000] "POST /api/auth/login HTTP/1.1" 401 59 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:57:17 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 01:57:17 [info]: Using JSON database for seeding...
+2026-08-21 01:57:17 [info]: ✓ Admin user "admin" created successfully with password "kosomelsisi".
+2026-08-21 01:59:22 [http]: ::1 - - [20/Aug/2026:22:59:22 +0000] "POST /api/auth/login HTTP/1.1" 200 394 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:32 [error]: [GET] /api/leads?limit=500 - MongooseError: Operation `leads.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:32 [http]: ::1 - - [20/Aug/2026:22:59:32 +0000] "GET /api/leads?limit=500 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:32 [error]: [GET] /api/calls?limit=500 - MongooseError: Operation `calls.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:32 [http]: ::1 - - [20/Aug/2026:22:59:32 +0000] "GET /api/calls?limit=500 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:35 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:35 [http]: ::1 - - [20/Aug/2026:22:59:35 +0000] "GET /api/users?limit=100 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:37 [error]: [POST] /api/scraper/start - Error: Google Maps scraping is not configured. Set GOOGLE_MAPS_API_KEY or GOOGLE_PLACES_API_KEY on the backend.
+    at D:\Coding\Gaia\backend\src\controllers\googlePlacesScraper.controller.js:225:11
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:280:10)
+    at authorizeAdmin (D:\Coding\Gaia\backend\src\middleware\auth.js:54:3)
+2026-08-21 01:59:37 [http]: ::1 - - [20/Aug/2026:22:59:37 +0000] "POST /api/scraper/start HTTP/1.1" 500 134 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:42 [error]: [POST] /api/scraper/start - Error: Google Maps scraping is not configured. Set GOOGLE_MAPS_API_KEY or GOOGLE_PLACES_API_KEY on the backend.
+    at D:\Coding\Gaia\backend\src\controllers\googlePlacesScraper.controller.js:225:11
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:280:10)
+    at authorizeAdmin (D:\Coding\Gaia\backend\src\middleware\auth.js:54:3)
+2026-08-21 01:59:42 [http]: ::1 - - [20/Aug/2026:22:59:42 +0000] "POST /api/scraper/start HTTP/1.1" 500 134 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:45 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:45 [http]: ::1 - - [20/Aug/2026:22:59:45 +0000] "GET /api/users?limit=100 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:46 [error]: [POST] /api/scraper/start - Error: Google Maps scraping is not configured. Set GOOGLE_MAPS_API_KEY or GOOGLE_PLACES_API_KEY on the backend.
+    at D:\Coding\Gaia\backend\src\controllers\googlePlacesScraper.controller.js:225:11
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:280:10)
+    at authorizeAdmin (D:\Coding\Gaia\backend\src\middleware\auth.js:54:3)
+2026-08-21 01:59:46 [http]: ::1 - - [20/Aug/2026:22:59:46 +0000] "POST /api/scraper/start HTTP/1.1" 500 134 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:49 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 01:59:49 [http]: ::1 - - [20/Aug/2026:22:59:49 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:49 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 01:59:49 [http]: ::1 - - [20/Aug/2026:22:59:49 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 01:59:59 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:59 [http]: ::1 - - [20/Aug/2026:22:59:59 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:09 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 02:00:09 [http]: ::1 - - [20/Aug/2026:23:00:09 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:09 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 02:00:09 [http]: ::1 - - [20/Aug/2026:23:00:09 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:16 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:16 [http]: ::1 - - [20/Aug/2026:23:00:16 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:24 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:24 [http]: ::1 - - [20/Aug/2026:23:00:24 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:29 [http]: ::1 - - [20/Aug/2026:23:00:29 +0000] "POST /api/leads HTTP/1.1" - - "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:29 [http]: ::1 - - [20/Aug/2026:23:00:29 +0000] "GET /api/settings/me HTTP/1.1" - - "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:29 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:29 [http]: ::1 - - [20/Aug/2026:23:00:29 +0000] "GET /api/auth/me HTTP/1.1" 200 201 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:29 [http]: ::1 - - [20/Aug/2026:23:00:29 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:30 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 02:00:30 [http]: ::1 - - [20/Aug/2026:23:00:30 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:30 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 02:00:30 [http]: ::1 - - [20/Aug/2026:23:00:30 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:34 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:39 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:39 [http]: ::1 - - [20/Aug/2026:23:00:39 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:39 [error]: [GET] /api/leads?limit=500 - MongooseError: Operation `leads.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:39 [http]: ::1 - - [20/Aug/2026:23:00:39 +0000] "GET /api/leads?limit=500 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:39 [error]: [GET] /api/calls?limit=500 - MongooseError: Operation `calls.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:39 [http]: ::1 - - [20/Aug/2026:23:00:39 +0000] "GET /api/calls?limit=500 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:44 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:44 [http]: ::1 - - [20/Aug/2026:23:00:44 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:48 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:48 [http]: ::1 - - [20/Aug/2026:23:00:48 +0000] "GET /api/users?limit=100 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:49 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:49 [http]: ::1 - - [20/Aug/2026:23:00:49 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:54 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:54 [http]: ::1 - - [20/Aug/2026:23:00:54 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:00:58 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:58 [http]: ::1 - - [20/Aug/2026:23:00:58 +0000] "GET /api/users?limit=100 HTTP/1.1" 500 88 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:04 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:04 [http]: ::1 - - [20/Aug/2026:23:01:04 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:09 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:09 [http]: ::1 - - [20/Aug/2026:23:01:09 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:10 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 02:01:10 [http]: ::1 - - [20/Aug/2026:23:01:10 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:10 [warn]: [GET] /api/users/mt240btzs8bu7ee1ajt/csv-lists - 400: Invalid ID format for field: assignedTo
+2026-08-21 02:01:10 [http]: ::1 - - [20/Aug/2026:23:01:10 +0000] "GET /api/users/mt240btzs8bu7ee1ajt/csv-lists HTTP/1.1" 400 69 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:14 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:14 [http]: ::1 - - [20/Aug/2026:23:01:14 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:19 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:19 [http]: ::1 - - [20/Aug/2026:23:01:19 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:24 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:24 [http]: ::1 - - [20/Aug/2026:23:01:24 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:26 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:26 [http]: ::1 - - [20/Aug/2026:23:01:26 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:32 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:32 [http]: ::1 - - [20/Aug/2026:23:01:32 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:34 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:34 [http]: ::1 - - [20/Aug/2026:23:01:34 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:36 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:36 [http]: ::1 - - [20/Aug/2026:23:01:36 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:36 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:36 [http]: ::1 - - [20/Aug/2026:23:01:36 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:39 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:39 [http]: ::1 - - [20/Aug/2026:23:01:39 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:42 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:42 [http]: ::1 - - [20/Aug/2026:23:01:42 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:44 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:44 [http]: ::1 - - [20/Aug/2026:23:01:44 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:46 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:46 [http]: ::1 - - [20/Aug/2026:23:01:46 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:46 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:46 [http]: ::1 - - [20/Aug/2026:23:01:46 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:52 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:52 [http]: ::1 - - [20/Aug/2026:23:01:52 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:54 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:54 [http]: ::1 - - [20/Aug/2026:23:01:54 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:56 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:56 [http]: ::1 - - [20/Aug/2026:23:01:56 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:56 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:56 [http]: ::1 - - [20/Aug/2026:23:01:56 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:01:56 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:56 [http]: ::1 - - [20/Aug/2026:23:01:56 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:02 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:02 [http]: ::1 - - [20/Aug/2026:23:02:02 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:04 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:04 [http]: ::1 - - [20/Aug/2026:23:02:04 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:06 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:06 [http]: ::1 - - [20/Aug/2026:23:02:06 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:06 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:06 [http]: ::1 - - [20/Aug/2026:23:02:06 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:09 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:09 [http]: ::1 - - [20/Aug/2026:23:02:09 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:12 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:12 [http]: ::1 - - [20/Aug/2026:23:02:12 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:14 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:14 [http]: ::1 - - [20/Aug/2026:23:02:14 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:16 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:16 [http]: ::1 - - [20/Aug/2026:23:02:16 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:16 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:16 [http]: ::1 - - [20/Aug/2026:23:02:16 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:22 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:22 [http]: ::1 - - [20/Aug/2026:23:02:22 +0000] "GET /api/settings/me HTTP/1.1" 500 94 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:22 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:22 [http]: ::1 - - [20/Aug/2026:23:02:22 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:24 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:24 [http]: ::1 - - [20/Aug/2026:23:02:24 +0000] "POST /api/leads HTTP/1.1" 500 93 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 02:02:27 [info]: Server running in development mode on port 5000
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 693 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 583 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 668 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 598 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 620 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 693 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 693 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 618 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 575 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 598 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 598 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 630 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 618 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 618 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 636 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 603 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 583 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 602 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 636 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 636 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 620 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 588 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 582 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 583 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 575 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 570 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 620 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 620 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 629 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 615 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 575 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 575 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 629 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 604 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 631 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 631 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 604 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 602 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 605 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 603 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 602 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 588 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 600 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 602 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 588 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 570 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 575 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 587 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 570 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 615 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 601 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 569 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 615 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 631 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 643 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 614 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 631 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 606 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 573 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 630 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 605 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 600 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 638 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 606 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 600 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 576 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 598 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 600 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 575 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 601 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 664 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 575 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 601 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 644 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 579 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 601 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 644 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 572 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 597 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 643 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 573 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 638 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 650 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 573 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 637 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:27 [http]: ::1 - - [20/Aug/2026:23:02:27 +0000] "POST /api/leads HTTP/1.1" 201 598 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 600 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 638 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 597 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 663 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 604 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 597 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 664 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 579 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 597 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 664 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 579 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 597 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 579 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 597 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 650 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 617 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 596 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 649 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 601 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 643 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 650 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 600 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 604 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 613 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 601 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 604 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 596 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 579 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 603 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 596 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 624 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 597 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 617 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 585 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 617 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 643 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 621 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 617 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 642 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 613 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 629 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 643 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 614 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 580 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 849 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 613 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 580 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 624 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 613 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 580 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 625 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 584 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 615 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 625 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 585 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 621 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 588 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 584 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 621 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 629 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 591 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 621 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 629 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 849 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 607 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 630 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 849 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 613 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 621 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 849 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 612 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 615 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 578 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 613 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 616 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 588 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 596 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 616 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 587 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 658 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 588 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 606 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 610 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 592 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 607 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 622 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 581 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 607 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 622 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 578 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 589 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 622 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 579 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 596 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 589 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 578 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 596 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 657 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 527 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 596 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 657 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 611 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 602 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 657 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:02:28 [http]: ::1 - - [20/Aug/2026:23:02:28 +0000] "POST /api/leads HTTP/1.1" 201 610 "http://localhost:5174/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+2026-08-21 02:18:47 [warn]: [GET] /api/auth/me - 401: User account not found or deactivated.
+2026-08-21 02:19:11 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 02:19:11 [info]: Server running in development mode on port 5000
+2026-08-21 02:21:59 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 02:21:59 [info]: Server running in development mode on port 5000
+2026-08-21 05:02:42 [info]: JSON database initialized (file-based storage in backend/data/)
+2026-08-21 05:02:42 [info]: Server running in development mode on port 5000

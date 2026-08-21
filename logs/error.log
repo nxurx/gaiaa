@@ -1,0 +1,285 @@
+2026-06-23 23:24:16 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:24:16 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:24:29 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:32:31 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:32:43 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:32:50 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:33:41 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:36:06 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-06-23 23:38:54 [error]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+2026-08-21 00:43:43 [error]: MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.mongodb.net
+2026-08-21 01:34:08 [error]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-08-21 01:51:13 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:54:59 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:55:04 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:55:12 [error]: [POST] /api/auth/login - TypeError: User.findOne(...).select is not a function
+    at D:\Coding\Gaia\backend\src\controllers\auth.controller.js:16:65
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Coding\Gaia\backend\src\middleware\validate.js:20:3
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+2026-08-21 01:59:32 [error]: [GET] /api/leads?limit=500 - MongooseError: Operation `leads.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:32 [error]: [GET] /api/calls?limit=500 - MongooseError: Operation `calls.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:35 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:37 [error]: [POST] /api/scraper/start - Error: Google Maps scraping is not configured. Set GOOGLE_MAPS_API_KEY or GOOGLE_PLACES_API_KEY on the backend.
+    at D:\Coding\Gaia\backend\src\controllers\googlePlacesScraper.controller.js:225:11
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:280:10)
+    at authorizeAdmin (D:\Coding\Gaia\backend\src\middleware\auth.js:54:3)
+2026-08-21 01:59:42 [error]: [POST] /api/scraper/start - Error: Google Maps scraping is not configured. Set GOOGLE_MAPS_API_KEY or GOOGLE_PLACES_API_KEY on the backend.
+    at D:\Coding\Gaia\backend\src\controllers\googlePlacesScraper.controller.js:225:11
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:280:10)
+    at authorizeAdmin (D:\Coding\Gaia\backend\src\middleware\auth.js:54:3)
+2026-08-21 01:59:45 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 01:59:46 [error]: [POST] /api/scraper/start - Error: Google Maps scraping is not configured. Set GOOGLE_MAPS_API_KEY or GOOGLE_PLACES_API_KEY on the backend.
+    at D:\Coding\Gaia\backend\src\controllers\googlePlacesScraper.controller.js:225:11
+    at D:\Coding\Gaia\backend\src\utils\asyncHandler.js:5:19
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Coding\Gaia\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Coding\Gaia\backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Coding\Gaia\backend\node_modules\express\lib\router\index.js:280:10)
+    at authorizeAdmin (D:\Coding\Gaia\backend\src\middleware\auth.js:54:3)
+2026-08-21 01:59:59 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:16 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:24 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:29 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:34 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:39 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:39 [error]: [GET] /api/leads?limit=500 - MongooseError: Operation `leads.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:39 [error]: [GET] /api/calls?limit=500 - MongooseError: Operation `calls.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:44 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:48 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:49 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:54 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:00:58 [error]: [GET] /api/users?limit=100 - MongooseError: Operation `users.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:04 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:09 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:14 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:19 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:24 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:26 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:32 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:34 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:36 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:36 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:39 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:42 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:44 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:46 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:46 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:52 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:54 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:56 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:56 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:01:56 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:02 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:04 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:06 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:06 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:09 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:12 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:14 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:16 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:16 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:22 [error]: [GET] /api/settings/me - MongooseError: Operation `settings.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:22 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:02:24 [error]: [POST] /api/leads - MongooseError: Operation `leads.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Coding\Gaia\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-08-21 02:18:47 [error]: Uncaught Exception: EPIPE: broken pipe, write
