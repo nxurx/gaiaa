@@ -59,14 +59,7 @@ app.get('/health', (req, res) => {
 });
 
 // ── API Routes ─────────────────────────────────────────────────────────────────
-// Strip /api prefix before routing (Vercel serverless functions receive full path)
-app.use((req, res, next) => {
-  if (req.path.startsWith('/api')) {
-    req.url = req.path.substring(4); // Remove /api prefix
-  }
-  next();
-});
-app.use('/', routes);
+app.use('/api', routes);
 
 // ── 404 handler ────────────────────────────────────────────────────────────────
 app.use((req, res, next) => {
