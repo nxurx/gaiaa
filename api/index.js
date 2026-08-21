@@ -12,7 +12,6 @@ process.env.USE_MONGODB = 'false';
 const app = require('../backend/src/app');
 const { connectDB: connectJsonDB } = require('../backend/src/config/json-db');
 const User = require('../backend/src/models/User.json');
-const bcrypt = require('bcryptjs');
 
 // Auto-seed admin user for ephemeral Vercel database
 let isSeeded = false;
@@ -25,10 +24,10 @@ async function ensureAdminUser() {
     
     const existingAdmin = await User.findOne({ username: adminUsername });
     if (!existingAdmin) {
-      const hashedPassword = await bcrypt.hash(adminPassword, 10);
+      // User.create will hash the password, so pass plain text
       await User.create({
         username: adminUsername,
-        password: hashedPassword,
+        password: adminPassword,
         role: 'admin',
       });
       console.log(`✓ Admin user "${adminUsername}" created automatically for Vercel deployment.`);
