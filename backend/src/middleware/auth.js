@@ -24,7 +24,10 @@ const authenticate = asyncHandler(async (req, res, next) => {
     throw new ApiError(401, 'Invalid or expired token. Please log in again.');
   }
 
+  console.log(`Auth check for user ID: ${decoded.id}`);
   const user = await User.findById(decoded.id);
+  console.log(`User found: ${!!user}, isActive: ${user?.isActive}`);
+  
   if (!user || !user.isActive) {
     throw new ApiError(401, 'User account not found or deactivated.');
   }

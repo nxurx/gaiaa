@@ -8,5 +8,6 @@ router.use('/calls', require('./calls.routes'));
 router.use('/analytics', require('./analytics.routes'));
 router.use('/settings', require('./settings.routes'));
 router.use('/scraper', require('./scraper.routes'));
+router.use('/csv-lists', require('./csv-lists.routes'));
 
 module.exports = router;

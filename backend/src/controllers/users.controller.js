@@ -11,12 +11,16 @@ const { parsePagination } = require('../utils/queryHelpers');
 const createUser = asyncHandler(async (req, res) => {
   const { username, password, role } = req.body;
 
+  console.log(`Creating user: ${username}, role: ${role}`);
+
   const existing = await User.findOne({ username });
   if (existing) {
     throw new ApiError(409, `Username "${username}" is already taken.`);
   }
 
   const user = await User.create({ username, password, role });
+
+  console.log(`User created with ID: ${user._id}, isActive: ${user.isActive}`);
 
   sendSuccess(res, {
     statusCode: 201,
@@ -73,7 +77,7 @@ const reactivateUser = asyncHandler(async (req, res) => {
 
 /**
  * DELETE /api/users/:id  (Admin only)
- * Hard-deletes the user. Also removes their CSV lists.
+ * Hard-deletes the user. CSV lists are shared and not deleted.
  */
 const deleteUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
@@ -82,23 +86,17 @@ const deleteUser = asyncHandler(async (req, res) => {
     throw new ApiError(400, 'You cannot delete your own account.');
   }
 
-  await Promise.all([
-    user.deleteOne(),
-    CsvList.deleteMany({ assignedTo: user._id }),
-  ]);
+  await user.deleteOne();
 
   sendSuccess(res, { message: `User "${user.username}" deleted permanently.` });
 });
 
 /**
- * POST /api/users/:id/csv-lists  (Admin only)
- * Upload a parsed CSV list (array of row objects) assigned to an agent.
+ * POST /api/csv-lists  (Admin only)
+ * Upload a parsed CSV list (array of row objects) shared across all users.
  * Body: { name: string, rows: object[] }
  */
 const uploadCsvList = asyncHandler(async (req, res) => {
-  const agent = await User.findOne({ _id: req.params.id, role: 'agent' });
-  if (!agent) throw new ApiError(404, 'Active agent not found.');
-
   const { name, rows } = req.body;
   if (!Array.isArray(rows) || rows.length === 0) {
     throw new ApiError(400, 'rows must be a non-empty array.');
@@ -106,7 +104,6 @@ const uploadCsvList = asyncHandler(async (req, res) => {
 
   const list = await CsvList.create({
     name: name || `List ${new Date().toLocaleDateString()}`,
-    assignedTo: agent._id,
     uploadedBy: req.user._id,
     rows,
     rowCount: rows.length,
@@ -114,21 +111,17 @@ const uploadCsvList = asyncHandler(async (req, res) => {
 
   sendSuccess(res, {
     statusCode: 201,
-    message: `CSV list "${list.name}" assigned to ${agent.username} (${rows.length} rows).`,
+    message: `CSV list "${list.name}" uploaded (${rows.length} rows).`,
     data: list,
   });
 });
 
 /**
- * GET /api/users/:id/csv-lists  (Admin or the agent themselves)
+ * GET /api/csv-lists  (All authenticated users)
+ * Get all CSV lists shared across all users.
  */
 const getCsvLists = asyncHandler(async (req, res) => {
-  // Agents can only get their own lists
-  if (req.user.role === 'agent' && req.user._id.toString() !== req.params.id) {
-    throw new ApiError(403, 'Access denied.');
-  }
-
-  const lists = await CsvList.find({ assignedTo: req.params.id })
+  const lists = await CsvList.find()
     .populate('uploadedBy', 'username')
     .sort({ createdAt: -1 })
     .select('-rows'); // exclude rows in list view for performance
@@ -137,15 +130,11 @@ const getCsvLists = asyncHandler(async (req, res) => {
 });
 
 /**
- * GET /api/users/:id/csv-lists/:listId  (Admin or the agent themselves)
+ * GET /api/csv-lists/:listId  (All authenticated users)
  * Returns the full list including all rows.
  */
 const getCsvListById = asyncHandler(async (req, res) => {
-  if (req.user.role === 'agent' && req.user._id.toString() !== req.params.id) {
-    throw new ApiError(403, 'Access denied.');
-  }
-
-  const list = await CsvList.findOne({ _id: req.params.listId, assignedTo: req.params.id })
+  const list = await CsvList.findById(req.params.listId)
     .populate('uploadedBy', 'username');
   if (!list) throw new ApiError(404, 'CSV list not found.');
 
@@ -153,10 +142,10 @@ const getCsvListById = asyncHandler(async (req, res) => {
 });
 
 /**
- * DELETE /api/users/:id/csv-lists/:listId  (Admin only)
+ * DELETE /api/csv-lists/:listId  (Admin only)
  */
 const deleteCsvList = asyncHandler(async (req, res) => {
-  const list = await CsvList.findOneAndDelete({ _id: req.params.listId, assignedTo: req.params.id });
+  const list = await CsvList.findByIdAndDelete(req.params.listId);
   if (!list) throw new ApiError(404, 'CSV list not found.');
 
   sendSuccess(res, { message: 'CSV list deleted.' });
