@@ -32,6 +32,15 @@ class UserModel {
     const users = collections.users.find(query);
     return users.map(user => new UserInstance(user));
   }
+
+  static async countDocuments(query = {}) {
+    return collections.users.count(query);
+  }
+
+  static async deleteOne() {
+    // For JSON DB, this is handled by the instance method
+    throw new Error('Use instance deleteOne() method');
+  }
 }
 
 class UserInstance {
@@ -48,6 +57,28 @@ class UserInstance {
 
   async comparePassword(candidatePassword) {
     return bcrypt.compare(candidatePassword, this.password);
+  }
+
+  async save() {
+    // Update the user in the JSON database
+    const index = collections.users.data.findIndex(u => u._id === this._id);
+    if (index !== -1) {
+      collections.users.data[index] = {
+        ...collections.users.data[index],
+        ...this._doc,
+        updatedAt: new Date().toISOString(),
+      };
+      collections.users.saveData();
+    }
+    return this;
+  }
+
+  async deleteOne() {
+    const index = collections.users.data.findIndex(u => u._id === this._id);
+    if (index !== -1) {
+      collections.users.data.splice(index, 1);
+      collections.users.saveData();
+    }
   }
 
   toJSON() {
