@@ -13,6 +13,8 @@ const generateToken = (id) =>
 const login = asyncHandler(async (req, res) => {
   const { username, password } = req.body;
 
+  console.log(`Login attempt for username: ${username}`);
+
   let user;
   if (process.env.USE_MONGODB === 'true') {
     user = await User.findOne({ username, isActive: true }).select('+password');
@@ -20,7 +22,18 @@ const login = asyncHandler(async (req, res) => {
     user = await User.findOne({ username, isActive: true });
   }
   
-  if (!user || !(await user.comparePassword(password))) {
+  console.log(`User found: ${!!user}`);
+  
+  if (!user) {
+    console.log('User not found in database');
+    throw new ApiError(401, 'Invalid username or password.');
+  }
+
+  const passwordMatch = await user.comparePassword(password);
+  console.log(`Password match: ${passwordMatch}`);
+  
+  if (!passwordMatch) {
+    console.log('Password comparison failed');
     throw new ApiError(401, 'Invalid username or password.');
   }
 

@@ -22,8 +22,12 @@ async function ensureAdminUser() {
     const adminUsername = process.env.ADMIN_USERNAME || 'admin';
     const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
     
+    console.log(`Checking for admin user "${adminUsername}"...`);
     const existingAdmin = await User.findOne({ username: adminUsername });
+    console.log(`Existing admin found: ${!!existingAdmin}`);
+    
     if (!existingAdmin) {
+      console.log(`Creating admin user with username: ${adminUsername}`);
       // User.create will hash the password, so pass plain text
       await User.create({
         username: adminUsername,
