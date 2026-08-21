@@ -1,2 +1,12 @@
 node_modules
 .vercel
+.env
+.env.local
+.env.*.local
+logs/
+backend/data/
+backend/logs/
+backend/.env
+dist/
+.DS_Store
+*.log
