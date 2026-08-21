@@ -59,7 +59,14 @@ app.get('/health', (req, res) => {
 });
 
 // ── API Routes ─────────────────────────────────────────────────────────────────
-app.use('/api', routes);
+// Vercel auto-routes /api/* to api/index.js, so strip /api prefix before routing
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api')) {
+    req.url = req.path.substring(4); // Remove /api prefix
+  }
+  next();
+});
+app.use('/', routes);
 
 // ── 404 handler ────────────────────────────────────────────────────────────────
 app.use((req, res, next) => {
