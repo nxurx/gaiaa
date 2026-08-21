@@ -6,7 +6,8 @@
 
 const RAW_API_BASE = (import.meta.env.VITE_API_URL || '').trim()
 const API_BASE     = RAW_API_BASE.replace(/\/+$/, '')
-const BASE         = API_BASE ? `${API_BASE}/api` : '/api'
+// If VITE_API_URL is set, use it directly. Otherwise use /api for local/Vercel
+const BASE         = API_BASE || '/api'
 
 // ── Token Management ───────────────────────────────────────────────────────────
 export function getToken()  { return localStorage.getItem('gs_jwt') }
