@@ -9,6 +9,11 @@ if (fs.existsSync(rootEnvPath)) dotenv.config({ path: rootEnvPath });
 // Set environment to use JSON database for Vercel
 process.env.USE_MONGODB = 'false';
 
+// Set default JWT_SECRET if not provided
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'default-jwt-secret-change-in-production';
+}
+
 const app = require('../backend/src/app');
 const { connectDB: connectJsonDB } = require('../backend/src/config/json-db');
 const User = require('../backend/src/models/User.json');
