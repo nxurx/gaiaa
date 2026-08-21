@@ -33,15 +33,23 @@ const createUser = asyncHandler(async (req, res) => {
  * GET /api/users  (Admin only)
  */
 const getUsers = asyncHandler(async (req, res) => {
+  console.log('getUsers called');
   const { page, limit, skip } = parsePagination(req.query);
 
-  const [users, total] = await Promise.all([
-    User.find().sort({ createdAt: -1 }).skip(skip).limit(limit),
-    User.countDocuments(),
-  ]);
+  console.log('Fetching users...');
+  const users = await User.find();
+  console.log(`Users found: ${users.length}`);
+
+  const total = await User.countDocuments();
+  console.log(`Total users: ${total}`);
+
+  // Manual pagination for JSON DB
+  const paginatedUsers = users
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .slice(skip, skip + limit);
 
   sendSuccess(res, {
-    data: users,
+    data: paginatedUsers,
     meta: { total, page, limit, pages: Math.ceil(total / limit) },
   });
 });
