@@ -2,7 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const logger = require('../utils/logger');
 
-const DATA_DIR = path.resolve(__dirname, '../../data');
+// For Vercel, use /tmp directory which is writable
+const DATA_DIR = process.env.VERCEL 
+  ? '/tmp/data' 
+  : path.resolve(__dirname, '../../data');
 
 // Ensure data directory exists
 if (!fs.existsSync(DATA_DIR)) {
@@ -110,7 +113,12 @@ const collections = {
 };
 
 const connectDB = async () => {
-  logger.info('JSON database initialized (file-based storage in backend/data/)');
+  if (process.env.VERCEL) {
+    logger.warn('⚠️  Vercel detected: JSON database uses /tmp (data will reset on redeploy)');
+    logger.warn('⚠️  For production, use MongoDB Atlas or Vercel Postgres instead');
+  } else {
+    logger.info('JSON database initialized (file-based storage in backend/data/)');
+  }
   return collections;
 };
 
