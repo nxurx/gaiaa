@@ -1,5 +1,5 @@
-﻿const Lead = process.env.USE_MONGODB === 'true' ? require('../models/Lead') : require('../models/Lead.json');
-const User = process.env.USE_MONGODB === 'true' ? require('../models/User') : require('../models/User.json');
+const Lead = require('../models/Lead');
+const User = require('../models/User');
 const ApiError = require('../utils/ApiError');
 const asyncHandler = require('../utils/asyncHandler');
 const { sendSuccess } = require('../utils/apiResponse');
@@ -72,24 +72,14 @@ const getLeads = asyncHandler(async (req, res) => {
   if (status) filter.status = status;
   if (source) filter.source = source;
 
-  let leads, total;
-
-  if (process.env.USE_MONGODB === 'true') {
-    [leads, total] = await Promise.all([
-      Lead.find(filter)
-        .populate('assignedTo', 'username role')
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit),
-      Lead.countDocuments(filter),
-    ]);
-  } else {
-    const allLeads = Lead.find(filter);
-    total = allLeads.length;
-    leads = allLeads
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-      .slice(skip, skip + limit);
-  }
+  const [leads, total] = await Promise.all([
+    Lead.find(filter)
+      .populate('assignedTo', 'username role')
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit),
+    Lead.countDocuments(filter),
+  ]);
 
   sendSuccess(res, {
     data: leads,
@@ -120,21 +110,11 @@ const assignLead = asyncHandler(async (req, res) => {
   const agent = await User.findOne({ _id: assignedTo, role: 'agent', isActive: true });
   if (!agent) throw new ApiError(404, 'Active agent not found with the provided ID.');
 
-  let lead;
-  if (process.env.USE_MONGODB === 'true') {
-    lead = await Lead.findByIdAndUpdate(
-      req.params.id,
-      { assignedTo, status: 'contacted' },
-      { new: true, runValidators: true }
-    ).populate('assignedTo', 'username role');
-  } else {
-    lead = await Lead.findById(req.params.id);
-    if (!lead) throw new ApiError(404, 'Lead not found.');
-    lead.assignedTo = assignedTo;
-    lead.status = 'contacted';
-    lead.updatedAt = new Date().toISOString();
-    await lead.save();
-  }
+  const lead = await Lead.findByIdAndUpdate(
+    req.params.id,
+    { assignedTo, status: 'contacted' },
+    { new: true, runValidators: true }
+  ).populate('assignedTo', 'username role');
 
   if (!lead) throw new ApiError(404, 'Lead not found.');
 
@@ -192,33 +172,15 @@ const bulkImportLeads = asyncHandler(async (req, res) => {
         industry,
       });
 
-      // Check for duplicates - simplified for JSON database
-      let existing = null;
-      if (process.env.USE_MONGODB === 'true') {
-        const dupeFilter = {
-          $or: [
-            payload.phone && payload.phone !== '0000000000' ? { phone: payload.phone } : null,
-            payload.email && !payload.email.includes('@import.local') ? { email: payload.email } : null,
-            payload.website ? { website: payload.website } : null,
-            { name: payload.name, address: payload.address },
-          ].filter(Boolean),
-        };
-        existing = await Lead.findOne(dupeFilter);
-      } else {
-        // Simple deduplication for JSON database
-        if (payload.phone && payload.phone !== '0000000000') {
-          existing = await Lead.findOne({ phone: payload.phone });
-        }
-        if (!existing && payload.email && !payload.email.includes('@import.local')) {
-          existing = await Lead.findOne({ email: payload.email });
-        }
-        if (!existing && payload.website) {
-          existing = await Lead.findOne({ website: payload.website });
-        }
-        if (!existing) {
-          existing = await Lead.findOne({ name: payload.name, address: payload.address });
-        }
-      }
+      const dupeFilter = {
+        $or: [
+          payload.phone && payload.phone !== '0000000000' ? { phone: payload.phone } : null,
+          payload.email && !payload.email.includes('@import.local') ? { email: payload.email } : null,
+          payload.website ? { website: payload.website } : null,
+          { name: payload.name, address: payload.address },
+        ].filter(Boolean),
+      };
+      const existing = await Lead.findOne(dupeFilter);
 
       if (existing) {
         duplicates.push({ name: payload.name, reason: 'Already exists in lead database' });
@@ -252,4 +214,3 @@ const bulkImportLeads = asyncHandler(async (req, res) => {
 });
 
 module.exports = { createLead, getLeads, getLeadById, assignLead, updateLeadStatus, bulkImportLeads };
-

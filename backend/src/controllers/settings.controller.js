@@ -105,39 +105,34 @@ const testDiscord = asyncHandler(async (req, res) => {
     throw new ApiError(403, 'Access denied. Admin only.');
   }
 
-  const settings = await Settings.getGlobal();
-  const webhookUrl = req.body.webhookUrl || settings.discord.webhookUrl;
+  // Delivery is intentionally server-managed. The webhook never comes from
+  // the browser, so every button uses the same approved Discord destination.
+  const result = await sendDiscordNotification(
+    'Discord Integration Test',
+    {
+      name: 'G.A.I.A. test lead',
+      phone: '',
+      email: '',
+      company: 'Green G.A.I.A.',
+      website: '',
+      industry: 'Integration test',
+      rating: '',
+      reviews: '',
+      source: 'settings',
+      status: 'new',
+      tags: [],
+      customFields: {},
+      enrichment: {},
+    },
+    req.user,
+    { notes: 'Discord delivery is configured and working.' }
+  );
 
-  if (!webhookUrl) {
-    throw new ApiError(400, 'Discord webhook URL not configured');
+  if (!result.sent) {
+    throw new ApiError(400, result.reason || 'Discord webhook test failed');
   }
 
-  try {
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        embeds: [{
-          title: 'Test G.A.I.A. Test Notification',
-          description: 'Discord integration is working correctly!',
-          color: 0x3ecf6a,
-          timestamp: new Date().toISOString(),
-          fields: [
-            { name: 'Test Time', value: new Date().toLocaleString(), inline: true },
-            { name: 'Status', value: 'âœ... Connected', inline: true },
-          ],
-        }],
-      }),
-    });
-
-    if (!response.ok) {
-      throw new ApiError(400, 'Discord webhook test failed');
-    }
-
-    sendSuccess(res, { message: 'Discord webhook test successful' });
-  } catch (error) {
-    throw new ApiError(400, 'Discord webhook test failed: ' + error.message);
-  }
+  sendSuccess(res, { message: 'Discord webhook test successful' });
 });
 
 /**

@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = process.env.USE_MONGODB === 'true' ? require('../models/User') : require('../models/User.json');
+const User = require('../models/User');
 const ApiError = require('../utils/ApiError');
 const asyncHandler = require('../utils/asyncHandler');
 const { sendSuccess } = require('../utils/apiResponse');
@@ -15,12 +15,9 @@ const login = asyncHandler(async (req, res) => {
 
   console.log(`Login attempt for username: ${username}`);
 
-  let user;
-  if (process.env.USE_MONGODB === 'true') {
-    user = await User.findOne({ username, isActive: true });
-  } else {
-    user = await User.findOne({ username, isActive: true });
-  }
+  // Password is excluded by default in the MongoDB schema, but is required
+  // here solely to verify the submitted login password.
+  const user = await User.findOne({ username, isActive: true }).select('+password');
   
   console.log(`User found: ${!!user}`);
   

@@ -1,11 +1,8 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
-const app = require('./app');
 const connectMongoDB = require('./config/db');
-const { connectDB: connectJsonDB } = require('./config/json-db');
 const logger = require('./utils/logger');
-const bcrypt = require('bcryptjs');
 
 const backendEnvPath = path.resolve(__dirname, '../.env');
 const rootEnvPath = path.resolve(__dirname, '../../.env');
@@ -19,8 +16,6 @@ const PORT = process.env.PORT || 5000;
 let isSeeded = false;
 async function ensureAdminUser() {
   if (isSeeded) return;
-  
-  if (process.env.USE_MONGODB !== 'true') return;
   
   try {
     const User = require('./models/User');
@@ -49,18 +44,15 @@ async function ensureAdminUser() {
 }
 
 const startServer = async () => {
-  // Use JSON database (file-based) by default
-  if (process.env.USE_MONGODB !== 'true') {
-    await connectJsonDB();
-  } else {
-    try {
-      await connectMongoDB();
-      await ensureAdminUser();
-    } catch (error) {
-      logger.warn(`MongoDB connection failed, falling back to JSON database: ${error.message}`);
-      await connectJsonDB();
-    }
+  try {
+    await connectMongoDB();
+    await ensureAdminUser();
+  } catch (error) {
+    logger.error(`MongoDB is required and the server will not start: ${error.message}`);
+    process.exit(1);
   }
+
+  const app = require('./app');
 
   const server = app.listen(PORT, () => {
     logger.info(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);

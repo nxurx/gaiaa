@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = process.env.USE_MONGODB === 'true' ? require('../models/User') : require('../models/User.json');
+const User = require('../models/User');
 const ApiError = require('../utils/ApiError');
 const asyncHandler = require('../utils/asyncHandler');
 

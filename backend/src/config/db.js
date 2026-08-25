@@ -1,16 +1,10 @@
-﻿const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 
 let cachedConnection = null;
 let pendingConnection = null;
 
 const connectDB = async () => {
-  // Skip MongoDB connection for development/testing
-  if (process.env.SKIP_MONGODB === 'true') {
-    logger.info('MongoDB connection skipped (SKIP_MONGODB=true)');
-    return null;
-  }
-
   if (cachedConnection || mongoose.connection.readyState === 1) {
     return cachedConnection || mongoose.connection;
   }
@@ -19,8 +13,13 @@ const connectDB = async () => {
     return pendingConnection;
   }
 
+  const mongoUri = process.env.MONGO_URI;
+  if (!mongoUri) {
+    throw new Error('MONGO_URI is required');
+  }
+
   try {
-    pendingConnection = mongoose.connect(process.env.MONGO_URI, {
+    pendingConnection = mongoose.connect(mongoUri, {
       serverSelectionTimeoutMS: 30000,
       connectTimeoutMS: 30000,
     });

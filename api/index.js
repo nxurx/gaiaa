@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
 
@@ -6,17 +6,13 @@ const dotenv = require('dotenv');
 const rootEnvPath = path.resolve(__dirname, '../.env');
 if (fs.existsSync(rootEnvPath)) dotenv.config({ path: rootEnvPath });
 
-// Set environment to use JSON database for Vercel
-process.env.USE_MONGODB = 'false';
-
 // Set default JWT_SECRET if not provided
 if (!process.env.JWT_SECRET) {
   process.env.JWT_SECRET = 'default-jwt-secret-change-in-production';
 }
 
 const app = require('../backend/src/app');
-const { connectDB: connectJsonDB } = require('../backend/src/config/json-db');
-const User = require('../backend/src/models/User.json');
+const connectMongoDB = require('../backend/src/config/db');
 
 // Auto-seed admin user for ephemeral Vercel database
 let isSeeded = false;
@@ -24,6 +20,7 @@ async function ensureAdminUser() {
   if (isSeeded) return;
   
   try {
+    const User = require('../backend/src/models/User');
     const adminUsername = process.env.ADMIN_USERNAME || 'admin';
     const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
     
@@ -49,7 +46,7 @@ async function ensureAdminUser() {
 
 module.exports = async (req, res) => {
   try {
-    await connectJsonDB();
+    await connectMongoDB();
     await ensureAdminUser();
     return app(req, res);
   } catch (error) {

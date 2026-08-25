@@ -1,12 +1,11 @@
 ﻿import { useState, useEffect, useRef } from 'react'
-import { DEFAULT_WEBHOOK, sendDiscord, parseCSV } from '../../utils'
+import { parseCSV } from '../../utils'
 import { usersApi, settingsApi } from '../../api'
 import { useSettings } from '../../contexts/SettingsContext'
 
 export default function Settings({ user, userObj, onLogout, theme, onTheme, toast, onRefreshLeads, onRefreshCalls }) {
   const { settings, loading: settingsLoading, updateSettings, testDiscord, refetch } = useSettings()
   
-  const [webhook, setWebhook]             = useState('')
   const [webhookStatus, setWebhookStatus] = useState('none')
   const [syncing, setSyncing] = useState(false)
   const [saving, setSaving] = useState(false)
@@ -30,11 +29,11 @@ export default function Settings({ user, userObj, onLogout, theme, onTheme, toas
   const role        = userObj?.role || 'agent'
   const isAdmin     = role === 'admin'
 
-  // Initialize webhook from settings when loaded
+  // Discord delivery is configured on the server, so the browser never holds
+  // the webhook URL or sends messages directly to Discord.
   useEffect(() => {
-    if (settings?.discord?.webhookUrl) {
-      setWebhook(settings.discord.webhookUrl)
-      setWebhookStatus(settings.discord.webhookUrl ? 'configured' : 'none')
+    if (settings?.discord?.enabled) {
+      setWebhookStatus('configured')
     }
   }, [settings])
 
@@ -173,20 +172,24 @@ export default function Settings({ user, userObj, onLogout, theme, onTheme, toas
   // Webhook
   async function saveWebhook() {
     setSaving(true)
-    const result = await updateSettings({ discord: { webhookUrl: webhook, enabled: !!webhook } })
-    setSaving(false)
-    
-    if (result.success) {
-      setWebhookStatus('saved')
-      toast('Webhook saved.')
+    try {
+      const result = await updateSettings({ discord: { enabled: true } })
+      if (!result.success) {
+        toast('Failed to save Discord integration: ' + result.error, 'warn')
+        return
+      }
+
+      const delivery = await testDiscord()
+      setWebhookStatus(delivery.success ? 'connected' : 'failed')
+      toast(delivery.success ? 'Saved and sent a Discord test embed.' : 'Saved, but Discord delivery failed.', delivery.success ? 'green' : 'red')
       refetch()
-    } else {
-      toast('Failed to save webhook: ' + result.error, 'warn')
+    } finally {
+      setSaving(false)
     }
   }
 
   async function testWebhook() {
-    const result = await testDiscord(webhook)
+    const result = await testDiscord()
     setWebhookStatus(result.success ? 'connected' : 'failed')
     toast(result.success ? 'Discord connected!' : 'Failed. Check webhook URL.', result.success ? 'green' : 'red')
   }
@@ -456,12 +459,11 @@ export default function Settings({ user, userObj, onLogout, theme, onTheme, toas
             <div className="section-title"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>Discord Integration</div>
           </div>
         <div className="setting-row">
-          <label className="input-label">Webhook URL</label>
+          <label className="input-label">Discord delivery</label>
           <input 
             className="inp" 
-            placeholder="https://discord.com/api/webhooks/..." 
-            value={webhook} 
-            onChange={e => setWebhook(e.target.value)}
+            value="Server-managed webhook"
+            readOnly
             disabled={settingsLoading || saving}
           />
           <div className="webhook-status">
@@ -471,9 +473,9 @@ export default function Settings({ user, userObj, onLogout, theme, onTheme, toas
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
           <button className="btn btn-primary btn-sm" onClick={saveWebhook} disabled={settingsLoading || saving}>
-            {saving ? 'Saving...' : 'Save Webhook'}
+            {saving ? 'Saving...' : 'Save & Send'}
           </button>
-          <button className="btn btn-outline btn-sm" onClick={testWebhook} disabled={settingsLoading || !webhook}>
+          <button className="btn btn-outline btn-sm" onClick={testWebhook} disabled={settingsLoading || saving}>
             Test Connection
           </button>
         </div>
@@ -637,4 +639,3 @@ export default function Settings({ user, userObj, onLogout, theme, onTheme, toas
     </div>
   )
 }
-
