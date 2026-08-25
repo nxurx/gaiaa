@@ -17,7 +17,7 @@ const login = asyncHandler(async (req, res) => {
 
   let user;
   if (process.env.USE_MONGODB === 'true') {
-    user = await User.findOne({ username, isActive: true }).select('+password');
+    user = await User.findOne({ username, isActive: true });
   } else {
     user = await User.findOne({ username, isActive: true });
   }
