@@ -27,14 +27,20 @@ async function ensureAdminUser() {
     const adminUsername = process.env.ADMIN_USERNAME || 'admin';
     const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
     
+    logger.info(`Checking for admin user: ${adminUsername}`);
     const existingAdmin = await User.findOne({ username: adminUsername });
+    logger.info(`Existing admin found: ${!!existingAdmin}`);
+    
     if (!existingAdmin) {
+      logger.info(`Creating admin user with username: ${adminUsername}`);
       await User.create({
         username: adminUsername,
         password: adminPassword,
         role: 'admin',
       });
       logger.info(`✓ Admin user "${adminUsername}" created automatically.`);
+    } else {
+      logger.info(`Admin user "${adminUsername}" already exists.`);
     }
     isSeeded = true;
   } catch (error) {
