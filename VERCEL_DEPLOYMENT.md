@@ -1,14 +1,15 @@
 # Vercel Deployment Guide
 
 ## Overview
-This project is configured to deploy on Vercel with both frontend and backend as serverless functions.
+This project deploys the Vite frontend and the Express/MongoDB backend on Vercel. The `api/index.js` serverless function handles every `/api/*` request.
 
 ## Important Notes
 
-### Database Limitations
-- **Current Setup**: Uses JSON file-based database stored in `/tmp/data` on Vercel
-- **Warning**: Data in `/tmp` is ephemeral and resets on every deployment/function cold start
-- **Production Recommendation**: For production use, switch to MongoDB Atlas or Vercel Postgres
+### Database
+
+- MongoDB Atlas is required. JSON/file-based storage is not supported.
+- The Vercel function reuses its Mongoose connection between warm invocations.
+- Allow Vercel to reach your Atlas cluster through Atlas Network Access before deploying.
 
 ### Scraping Limitations
 - Puppeteer (used for web scraping) has limited support in Vercel serverless functions
@@ -35,15 +36,15 @@ Set these in Vercel Project Settings > Environment Variables:
 
 ```
 JWT_SECRET=your-secret-key-change-in-production
+MONGO_URI=mongodb+srv://your-user:your-url-encoded-password@your-cluster.mongodb.net/gaia?retryWrites=true&w=majority
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=use-a-strong-password
 GOOGLE_MAPS_API_KEY=your-google-maps-api-key
-USE_MONGODB=false
+CORS_ORIGIN=https://your-project.vercel.app
 ```
 
 ### 4. Post-Deployment Setup
-After deployment, you'll need to seed the admin user:
-- Access your deployed site
-- The system will create a default admin user on first run
-- Or manually seed via Vercel CLI if needed
+The first successful request automatically creates the configured admin account if it does not exist.
 
 ## Local Development vs Production
 
@@ -53,29 +54,12 @@ npm run dev
 ```
 - Frontend: http://localhost:5174
 - Backend: http://localhost:5000
-- Database: `backend/data/` (persistent)
+- Database: MongoDB Atlas
 
 ### Vercel Production
 - Frontend + Backend: Single URL
-- Database: `/tmp/data` (ephemeral)
+- Database: MongoDB Atlas
 - API routes: `/api/*`
-
-## Migration to Production Database
-
-To switch to a persistent database for production:
-
-### Option 1: MongoDB Atlas
-1. Create a free MongoDB Atlas account
-2. Create a cluster and get connection string
-3. Set environment variable: `USE_MONGODB=true`
-4. Set environment variable: `MONGO_URI=mongodb+srv://...`
-5. Remove the `process.env.USE_MONGODB = 'false'` line in `api/index.js`
-
-### Option 2: Vercel Postgres
-1. Add Vercel Postgres database to your project
-2. Install `@vercel/postgres` package
-3. Rewrite `json-db.js` to use Postgres instead of JSON files
-4. Update models to use SQL queries
 
 ## Troubleshooting
 
@@ -86,11 +70,12 @@ To switch to a persistent database for production:
 ### Runtime Errors
 - Check Vercel function logs for errors
 - Verify environment variables are set correctly
-- Ensure API routes are properly configured in `vercel.json`
+- Confirm `MONGO_URI`, `JWT_SECRET`, `ADMIN_USERNAME`, and `ADMIN_PASSWORD` are set for the Production environment, then redeploy. Vercel applies environment-variable changes only to new deployments.
 
-### Data Persistence Issues
-- If data disappears after deployments, you're using the JSON database
-- Switch to MongoDB Atlas or Vercel Postgres for persistent storage
+### MongoDB Connection Errors
+- In Atlas, configure Network Access for the Vercel deployment; use Vercel Static IP if available on your plan, or a temporary broad allowlist only for development.
+- Confirm the database user's password in `MONGO_URI` is URL-encoded.
+- Open the Vercel function logs and look for `MongoDB connected:`.
 
 ## Current Configuration Files
 
