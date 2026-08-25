@@ -5,6 +5,7 @@ const app = require('./app');
 const connectMongoDB = require('./config/db');
 const { connectDB: connectJsonDB } = require('./config/json-db');
 const logger = require('./utils/logger');
+const bcrypt = require('bcryptjs');
 
 const backendEnvPath = path.resolve(__dirname, '../.env');
 const rootEnvPath = path.resolve(__dirname, '../../.env');
@@ -14,6 +15,33 @@ if (fs.existsSync(rootEnvPath)) dotenv.config({ path: rootEnvPath, override: tru
 
 const PORT = process.env.PORT || 5000;
 
+// Auto-seed admin user for MongoDB
+let isSeeded = false;
+async function ensureAdminUser() {
+  if (isSeeded) return;
+  
+  if (process.env.USE_MONGODB !== 'true') return;
+  
+  try {
+    const User = require('./models/User');
+    const adminUsername = process.env.ADMIN_USERNAME || 'admin';
+    const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+    
+    const existingAdmin = await User.findOne({ username: adminUsername });
+    if (!existingAdmin) {
+      await User.create({
+        username: adminUsername,
+        password: adminPassword,
+        role: 'admin',
+      });
+      logger.info(`✓ Admin user "${adminUsername}" created automatically.`);
+    }
+    isSeeded = true;
+  } catch (error) {
+    logger.error(`Failed to seed admin user: ${error.message}`);
+  }
+}
+
 const startServer = async () => {
   // Use JSON database (file-based) by default
   if (process.env.USE_MONGODB !== 'true') {
@@ -21,6 +49,7 @@ const startServer = async () => {
   } else {
     try {
       await connectMongoDB();
+      await ensureAdminUser();
     } catch (error) {
       logger.warn(`MongoDB connection failed, falling back to JSON database: ${error.message}`);
       await connectJsonDB();
