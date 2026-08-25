@@ -2,7 +2,7 @@
 const path = require('path');
 const dotenv = require('dotenv');
 const app = require('./app');
-const { connectDB: connectMongoDB } = require('./config/db');
+const connectMongoDB = require('./config/db');
 const { connectDB: connectJsonDB } = require('./config/json-db');
 const logger = require('./utils/logger');
 
