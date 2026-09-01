@@ -101,17 +101,26 @@ const deleteUser = asyncHandler(async (req, res) => {
 
 /**
  * POST /api/csv-lists  (Admin only)
- * Upload a parsed CSV list (array of row objects) shared across all users.
+ * Upload a parsed CSV list (array of row objects) for a specific agent.
  * Body: { name: string, rows: object[] }
  */
 const uploadCsvList = asyncHandler(async (req, res) => {
   const { name, rows } = req.body;
+  const agentId = req.params.agentId;
+
   if (!Array.isArray(rows) || rows.length === 0) {
     throw new ApiError(400, 'rows must be a non-empty array.');
   }
 
+  // Verify the agent exists and is active
+  const agent = await User.findOne({ _id: agentId, role: 'agent', isActive: true });
+  if (!agent) {
+    throw new ApiError(404, 'Active agent not found with the provided ID.');
+  }
+
   const list = await CsvList.create({
     name: name || `List ${new Date().toLocaleDateString()}`,
+    assignedTo: agentId,
     uploadedBy: req.user._id,
     rows,
     rowCount: rows.length,
@@ -119,18 +128,24 @@ const uploadCsvList = asyncHandler(async (req, res) => {
 
   sendSuccess(res, {
     statusCode: 201,
-    message: `CSV list "${list.name}" uploaded (${rows.length} rows).`,
+    message: `CSV list "${list.name}" uploaded to ${agent.username} (${rows.length} rows).`,
     data: list,
   });
 });
 
 /**
  * GET /api/csv-lists  (All authenticated users)
- * Get all CSV lists shared across all users.
+ * Get CSV lists. Admins see all, agents see only their assigned lists.
  */
 const getCsvLists = asyncHandler(async (req, res) => {
-  const lists = await CsvList.find()
+  const filter = {};
+  if (req.user.role === 'agent') {
+    filter.assignedTo = req.user._id;
+  }
+
+  const lists = await CsvList.find(filter)
     .populate('uploadedBy', 'username')
+    .populate('assignedTo', 'username')
     .sort({ createdAt: -1 })
     .select('-rows'); // exclude rows in list view for performance
 

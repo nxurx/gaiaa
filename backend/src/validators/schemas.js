@@ -90,6 +90,24 @@ const uploadCsvListSchema = {
   }),
 };
 
+const bulkImportLeadsSchema = {
+  body: Joi.object({
+    leads: Joi.array()
+      .items(Joi.object().unknown(true))
+      .min(1)
+      .max(10000)
+      .required(),
+    assignTo: Joi.string()
+      .pattern(/^[0-9a-fA-F]{24}$/)
+      .optional(),
+    campaign: Joi.string().max(120).optional().allow(''),
+    tags: Joi.array().items(Joi.string()).optional(),
+    priority: Joi.string().valid('low', 'normal', 'high', 'urgent').optional(),
+    source: Joi.string().valid('form', 'call', 'google_maps_scraper', 'csv_import', 'crm').optional(),
+    industry: Joi.string().max(120).optional().allow(''),
+  }),
+};
+
 module.exports = {
   loginSchema,
   createUserSchema,
@@ -99,4 +117,5 @@ module.exports = {
   createCallSchema,
   listQuerySchema,
   uploadCsvListSchema,
+  bulkImportLeadsSchema,
 };

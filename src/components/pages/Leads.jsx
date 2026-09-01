@@ -102,7 +102,10 @@ export default function Leads({ leads, onLeads, onAddFiles, onPreview, toast, us
     try {
       const res     = await leadsApi.assign(leadId, agentId)
       const updated = res.data
-      onLeads(leads.map(l => l.id === leadId ? { ...l, assignedTo: updated.assignedTo, status: 'callback' } : l))
+      const assigned = updated.assignedTo?.username || updated.assignedTo || null
+      const statusMap = { new: 'uncalled', contacted: 'callback', converted: 'interested', lost: 'not-interested' }
+      const newStatus = statusMap[updated.status] || updated.status || 'uncalled'
+      onLeads(leads.map(l => l.id === leadId ? { ...l, assignedTo: assigned, status: newStatus } : l))
       toast(`Lead assigned to ${updated.assignedTo?.username || 'agent'}.`)
       setAssigningLeadId(null)
     } catch (e) {
@@ -292,7 +295,7 @@ export default function Leads({ leads, onLeads, onAddFiles, onPreview, toast, us
                     {isAdmin && (
                       <td onClick={e => e.stopPropagation()}>
                         {l.assignedTo
-                          ? <span style={{ fontSize: 11, color: 'var(--b)' }}>{l.assignedTo.username || l.assignedTo}</span>
+                          ? <span style={{ fontSize: 11, color: 'var(--b)' }}>{typeof l.assignedTo === 'object' ? l.assignedTo.username : l.assignedTo}</span>
                           : <span style={{ opacity: .35, fontSize: 11 }}>Unassigned</span>}
                       </td>
                     )}
@@ -372,7 +375,7 @@ export default function Leads({ leads, onLeads, onAddFiles, onPreview, toast, us
             {selectedLead.assignedTo && (
               <div style={{ background: 'var(--bg2)', borderRadius: 6, padding: '8px 10px', marginBottom: 10 }}>
                 <div style={{ fontSize: 9, color: 'var(--text)', opacity: .4, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 2 }}>Assigned To</div>
-                <div style={{ fontSize: 12, color: 'var(--b)' }}>{selectedLead.assignedTo.username || selectedLead.assignedTo}</div>
+                <div style={{ fontSize: 12, color: 'var(--b)' }}>{typeof selectedLead.assignedTo === 'object' ? selectedLead.assignedTo.username : selectedLead.assignedTo}</div>
               </div>
             )}
 
@@ -422,6 +425,7 @@ export default function Leads({ leads, onLeads, onAddFiles, onPreview, toast, us
 
 function normaliseLead(l) {
   const statusMap = { new: 'uncalled', contacted: 'callback', converted: 'interested', lost: 'not-interested' }
+  const assigned = l.assignedTo?.username || l.assignedTo || null
   return {
     id:         l._id,
     name:       l.name,
@@ -435,7 +439,7 @@ function normaliseLead(l) {
     status:     statusMap[l.status]  || l.status || 'uncalled',
     notes:      l.notes              || '',
     calledAt:   l.updatedAt          || null,
-    assignedTo: l.assignedTo         || null,
+    assignedTo: assigned,
     source:     l.source             || 'form',
     raw:        l,
   }

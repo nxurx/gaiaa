@@ -1,7 +1,6 @@
 ﻿import { useState } from 'react'
 import { authApi, setToken, ApiError } from '../api'
 
-// Theme options stay the same - zero UI change
 const THEME_OPTS = [['', 'tp-g'], ['red', 'tp-r'], ['mono', 'tp-m']]
 
 export default function Auth({ theme, onTheme, onLogin, toast }) {
@@ -18,12 +17,16 @@ export default function Auth({ theme, onTheme, onLogin, toast }) {
     setErr('')
 
     try {
-      const data = await authApi.login(username.trim().toLowerCase(), pw)
-      setToken(data.data.token)
-      onLogin(data.data.user)   // pass full user object up to App
-    } catch (e) {
-      const msg = e instanceof ApiError ? e.message : 'Login failed. Check backend.'
-      setErr(msg)
+      const response = await authApi.login(username.trim().toLowerCase(), pw)
+      if (response && response.data && response.data.token) {
+        setToken(response.data.token)
+        onLogin(response.data.user)
+      } else {
+        throw new Error('Invalid response from server')
+      }
+    } catch (error) {
+      const errorMessage = error instanceof ApiError ? error.message : (error?.message || 'Login failed. Check backend.')
+      setErr(errorMessage)
       setPw('')
     } finally {
       setLoading(false)
@@ -85,4 +88,3 @@ export default function Auth({ theme, onTheme, onLogin, toast }) {
     </div>
   )
 }
-

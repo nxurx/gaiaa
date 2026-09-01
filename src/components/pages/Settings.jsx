@@ -142,8 +142,12 @@ export default function Settings({ user, userObj, onLogout, theme, onTheme, toas
 
   async function loadAgentLists(agentId) {
     try {
-      const data = await usersApi.getCsvLists(agentId)
-      setAgentLists(prev => ({ ...prev, [agentId]: data.data || [] }))
+      const data = await usersApi.getCsvLists()
+      // Filter lists for this specific agent
+      const agentLists = (data.data || []).filter(list => 
+        list.assignedTo?._id === agentId || list.assignedTo === agentId
+      )
+      setAgentLists(prev => ({ ...prev, [agentId]: agentLists }))
     } catch (e) {
       toast('Failed to load lists: ' + e.message, 'warn')
     }
@@ -161,7 +165,7 @@ export default function Settings({ user, userObj, onLogout, theme, onTheme, toas
   async function handleDeleteList(agentId, listId, listName) {
     if (!confirm(`Delete list "${listName}"?`)) return
     try {
-      await usersApi.deleteCsvList(agentId, listId)
+      await usersApi.deleteCsvList(null, listId)
       toast('List deleted.')
       loadAgentLists(agentId)
     } catch (e) {

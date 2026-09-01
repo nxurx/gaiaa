@@ -396,15 +396,21 @@ function MyLists({ userObj, leads, onLeads, toast }) {
 
   useEffect(() => {
     if (!userObj?._id) return
-    usersApi.getCsvLists(userObj._id)
-      .then(d => { setLists(d.data || []); setLoading(false) })
+    usersApi.getCsvLists()
+      .then(d => { 
+        // Filter lists for this specific agent
+        const agentLists = (d.data || []).filter(list => 
+          list.assignedTo?._id === userObj._id || list.assignedTo === userObj._id
+        )
+        setLists(agentLists); setLoading(false) 
+      })
       .catch(() => setLoading(false))
   }, [userObj?._id])
 
   async function loadList(list) {
     setLoadingId(list._id)
     try {
-      const res  = await usersApi.getCsvListById(userObj._id, list._id)
+      const res  = await usersApi.getCsvListById(null, list._id)
       const rows = res.data?.rows || []
       if (!rows.length) { toast('This list has no rows.', 'warn'); return }
 

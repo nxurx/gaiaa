@@ -1,8 +1,7 @@
 // ── API SERVICE LAYER ──────────────────────────────────────────────────────────
 // All communication with the Gaia backend goes through this file.
-// Local dev: Vite proxy at /api → localhost:5000
+// Local dev: Vite proxy at /api → localhost:5001
 // Production: set VITE_API_URL to your deployed Gaia backend (e.g. https://gaia.yourdomain.com)
-// When hosted at greensolutions.cc/gaia, set VITE_API_URL=https://your-gaia-backend.vercel.app
 
 const RAW_API_BASE = (import.meta.env.VITE_API_URL || '').trim()
 const API_BASE     = RAW_API_BASE.replace(/\/+$/, '')
@@ -34,6 +33,10 @@ async function req(method, path, body = null) {
     const msg = data?.message || `Request failed (${res.status})`
     throw new ApiError(msg, res.status, data?.errors || [])
   }
+  
+  // Debug logging
+  console.log(`${method} ${BASE}${path} ->`, data)
+  
   return data
 }
 
@@ -86,10 +89,10 @@ export const usersApi = {
   reactivate: (id)          => req('PATCH',  `/users/${id}/reactivate`),
   delete:     (id)          => req('DELETE', `/users/${id}`),
 
-  uploadCsvList:  (agentId, name, rows) => req('POST',   `/users/${agentId}/csv-lists`, { name, rows }),
-  getCsvLists:    (agentId)             => req('GET',    `/users/${agentId}/csv-lists`),
-  getCsvListById: (agentId, listId)     => req('GET',    `/users/${agentId}/csv-lists/${listId}`),
-  deleteCsvList:  (agentId, listId)     => req('DELETE', `/users/${agentId}/csv-lists/${listId}`),
+  uploadCsvList:  (agentId, name, rows) => req('POST',   `/csv-lists/${agentId}/csv-lists`, { name, rows }),
+  getCsvLists:    (agentId)             => req('GET',    `/csv-lists`),
+  getCsvListById: (agentId, listId)     => req('GET',    `/csv-lists/${listId}`),
+  deleteCsvList:  (agentId, listId)     => req('DELETE', `/csv-lists/${listId}`),
 }
 
 // ── Leads ──────────────────────────────────────────────────────────────────────

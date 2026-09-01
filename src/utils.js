@@ -142,33 +142,66 @@ export function isWebsite(w) {
 export function hasContact(lead) { return isPhone(lead.phone) || isWebsite(lead.website); }
 
 // â”€â”€ CSV PARSER â”€â”€
+// Full tokenizer (not just line-split-then-comma-split) so that quoted
+// fields can safely contain commas, embedded newlines, and escaped quotes
+// (the standard way Excel/Google Sheets export multi-line addresses/notes).
 export function parseCSV(text) {
+  if (!text) return { headers: [], rows: [] };
+  if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1); // strip BOM
   const normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
-  const lines      = normalized.trim().split('\n');
-  if (lines.length < 2) return { headers: [], rows: [] };
-  const first  = lines[0];
-  const tabs   = (first.match(/\t/g) || []).length;
-  const commas = (first.match(/,/g)  || []).length;
-  const semis  = (first.match(/;/g)  || []).length;
+
+  // Detect delimiter from the first physical line only (good enough for
+  // normal exports; quoted delimiters in the header row are rare/unsupported).
+  const firstLineEnd = normalized.indexOf('\n');
+  const firstLine = firstLineEnd === -1 ? normalized : normalized.slice(0, firstLineEnd);
+  const tabs   = (firstLine.match(/\t/g) || []).length;
+  const commas = (firstLine.match(/,/g)  || []).length;
+  const semis  = (firstLine.match(/;/g)  || []).length;
   let d = ',';
   if (tabs > commas && tabs > semis) d = '\t';
   else if (semis > commas) d = ';';
-  function spl(l) {
-    const r = []; let c = '', q = false;
-    for (let i = 0; i < l.length; i++) {
-      const ch = l[i];
-      if (ch === '"') { if (q && l[i + 1] === '"') { c += '"'; i++; } else q = !q; }
-      else if (ch === d && !q) { r.push(c.trim()); c = ''; }
-      else c += ch;
+
+  const rawRows = [];
+  let row = [];
+  let field = '';
+  let inQuotes = false;
+
+  for (let i = 0; i < normalized.length; i++) {
+    const ch = normalized[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        if (normalized[i + 1] === '"') { field += '"'; i++; }
+        else inQuotes = false;
+      } else {
+        field += ch;
+      }
+      continue;
     }
-    r.push(c.trim()); return r;
+    if (ch === '"') { inQuotes = true; continue; }
+    if (ch === d) { row.push(field); field = ''; continue; }
+    if (ch === '\n') { row.push(field); rawRows.push(row); row = []; field = ''; continue; }
+    field += ch;
   }
-  const headers = spl(lines[0]).map(h => h.replace(/^"|"$/g, '').replace(/^\uFEFF/, '').trim());
-  const rows    = lines.slice(1).filter(l => l.trim()).map(l => {
-    const v = spl(l); const r = {};
-    headers.forEach((h, i) => r[h] = (v[i] || '').replace(/^"|"$/g, '').trim());
-    return r;
+  // flush trailing field/row (files don't always end with a newline)
+  if (field.length || row.length) { row.push(field); rawRows.push(row); }
+
+  // Trim whitespace on every cell, then drop rows where every cell is blank
+  // (handles blank lines, and rows that are just a run of commas like ",,,").
+  const cleaned = rawRows
+    .map(r => r.map(v => v.trim()))
+    .filter(r => r.some(v => v !== ''));
+
+  if (cleaned.length < 1) return { headers: [], rows: [] };
+
+  const headers = cleaned[0].map(h => h.replace(/^\uFEFF/, '').trim());
+  if (!headers.some(h => h)) return { headers: [], rows: [] };
+
+  const rows = cleaned.slice(1).map(r => {
+    const obj = {};
+    headers.forEach((h, i) => { obj[h] = r[i] !== undefined ? r[i] : ''; });
+    return obj;
   });
+
   return { headers, rows };
 }
 
@@ -283,6 +316,43 @@ function fallbackCopy(text, onSuccess) {
   document.body.appendChild(ta); ta.focus(); ta.select();
   try { document.execCommand('copy'); onSuccess(); } catch (e) { /* noop */ }
   document.body.removeChild(ta);
+}
+
+// Backend Lead document â†’ frontend lead shape. Shared by App.jsx (initial fetch,
+// CSV bulk-import) and any other page that persists leads through the same
+// backend endpoint (e.g. Filter.jsx's "Send to Queue"), so every entry point
+// into the call queue produces an identically-shaped lead.
+export function normaliseLead(l) {
+  const assigned = l.assignedTo?.username || l.assignedTo || null
+  return {
+    id:         l._id,
+    name:       l.name || 'Unnamed lead',
+    email:      l.email      || '',
+    phone:      l.phone      || '-',
+    company:    l.company    || l.name || '',
+    website:    l.website    || '-',
+    category:   l.industry || l.serviceRequested || 'General',
+    address:    l.address || l.message || '-',
+    rating:     l.rating     || '0',
+    reviews:    l.reviews    || '0',
+    status:     mapLeadStatus(l.status),
+    notes:      l.notes      || '',
+    calledAt:   l.updatedAt  || null,
+    assignedTo: assigned,
+    appointmentAt: l.appointmentAt || null,
+    tags:       l.tags || [],
+    priority:   l.priority || 'normal',
+    campaign:   l.campaign || '',
+    customFields: l.customFields || {},
+    enrichment: l.enrichment || {},
+    source:     l.source     || 'form',
+    raw:        l,
+  }
+}
+
+// Backend status â†’ frontend status
+function mapLeadStatus(s) {
+  return ({ new: 'uncalled', contacted: 'callback', converted: 'interested', lost: 'not-interested' })[s] || s || 'uncalled'
 }
 
 export function handleFileRead(file, onParsed, onError) {

@@ -6,7 +6,7 @@ import {
 import {
   loadLocalState, saveLeads, saveCalls, saveScripts, saveNotes,
   saveTheme, clearUser, addLeadsFromRows, handleFileRead,
-  DEFAULT_SCRIPTS,
+  DEFAULT_SCRIPTS, 
 } from './utils'
 import Auth  from './components/Auth'
 import Shell from './components/Shell'
@@ -146,57 +146,86 @@ export default function App() {
   }, [])
 
   // â”€â”€ File import â†’ create leads via API â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // This is the ONE working path leads.controller#bulkImportLeads writes real DB
+  // records through - CSV rows sent here become genuine Lead documents that show
+  // up in the call queue on every page and survive a refresh.
   const handleAddFiles = useCallback((files) => {
     if (!files || !files.length) return
     const fileArr = Array.from(files)
-    let done = 0, totalAdded = 0
+    let done = 0, totalAdded = 0, totalSkipped = 0, totalErrored = 0
+    const allErrors = []
+
+    function finish() {
+      if (++done !== fileArr.length) return
+      if (totalAdded === 0 && (totalSkipped > 0 || totalErrored > 0)) {
+        const reason = totalSkipped > 0 && totalErrored === 0
+          ? `All ${totalSkipped} row(s) were already in the database (duplicates).`
+          : allErrors[0]
+            ? `${totalErrored} row(s) failed. First error: ${allErrors[0]}`
+            : 'No rows could be imported (check CSV format).'
+        toast(reason, 'warn')
+      }
+    }
 
     fileArr.forEach(file => {
       handleFileRead(file, async ({ headers, rows }) => {
-        const newLeads = addLeadsFromRows(leads, rows, headers)
-        totalAdded += newLeads.length
+        if (!rows.length) {
+          toast(`${file.name}: CSV has headers but no data rows.`, 'warn')
+          finish()
+          return
+        }
 
-        // POST each new lead to backend
-        const created = []
-        for (const l of newLeads) {
-          try {
-            const res = await leadsApi.submit({
-              name:             l.name,
-              email:            l.email || `noreply+${Date.now()}@import.local`,
-              phone:            l.phone && l.phone !== '-' && l.phone !== '-' ? l.phone : '0000000000',
-              serviceRequested: l.category || 'General',
-              message:          l.address || '',
-              website:          l.website && l.website !== '-' && l.website !== '-' ? l.website : '',
-              industry:         l.category || 'General',
-              address:          l.address && l.address !== '-' && l.address !== '-' ? l.address : '',
-              rating:           String(l.rating || ''),
-              reviews:          String(l.reviews || ''),
-              source:           'form',
+        try {
+          // Use bulk import API instead of individual POST requests
+          const res = await leadsApi.bulkImport({
+            leads: rows,
+            source: 'csv_import',
+            industry: 'General',
+          })
+
+          const imported = res.data?.leads || []
+          const skipped  = res.data?.skipped || 0
+          const errors   = res.data?.errors || []
+
+          if (imported.length) {
+            const newLeads = imported.map(normaliseLead)
+            totalAdded += newLeads.length
+
+            setLeads(prev => {
+              const updated = [...prev, ...newLeads]
+              saveLeads(updated)
+              return updated
             })
-            if (res.data) created.push(normaliseLead(res.data))
-          } catch {
-            // If backend rejects, keep local version as fallback
-            created.push(l)
           }
+
+          totalSkipped += skipped
+          totalErrored += errors.length
+          errors.forEach(e => allErrors.push(`${e.name}: ${e.error}`))
+
+          // Only ever claim success for rows genuinely written to the database.
+          if (imported.length) {
+            const bits = [`✓ ${imported.length} lead${imported.length === 1 ? '' : 's'} imported from ${file.name}.`]
+            if (skipped) bits.push(`${skipped} duplicate${skipped === 1 ? '' : 's'} skipped.`)
+            if (errors.length) bits.push(`${errors.length} row${errors.length === 1 ? '' : 's'} failed.`)
+            toast(bits.join(' '), errors.length ? 'warn' : 'green')
+          } else if (skipped && !errors.length) {
+            toast(`${file.name}: all ${skipped} row(s) already exist in the database - nothing new to import.`, 'warn')
+          } else if (errors.length) {
+            toast(`${file.name}: ${errors.length} row(s) failed - ${errors[0].name}: ${errors[0].error}`, 'warn')
+          } else {
+            toast(`${file.name}: no leads were imported.`, 'warn')
+          }
+        } catch (err) {
+          toast(`${file.name}: CSV import failed - ` + err.message, 'warn')
         }
 
-        setLeads(prev => {
-          const updated = [...prev, ...created]
-          saveLeads(updated)
-          return updated
-        })
-
-        if (++done === fileArr.length) {
-          toast(totalAdded > 0
-            ? `${totalAdded} leads added.`
-            : 'No new leads found (check columns).')
-        }
+        finish()
       }, (err) => {
-        toast(err, 'warn')
-        if (++done === fileArr.length && totalAdded > 0) toast(`${totalAdded} leads added.`)
+        toast('CSV parsing failed: ' + err, 'warn')
+        finish()
       })
     })
-  }, [leads, toast])
+  }, [toast])
 
   // â”€â”€ Render â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   if (!authReady) return null   // silent boot - no flash
@@ -246,33 +275,33 @@ export default function App() {
 }
 
 // â”€â”€ Shape normalisers (backend â†’ frontend) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-function normaliseLead(l) {
-  const assigned = l.assignedTo?.username || l.assignedTo || null
-  return {
-    id:         l._id,
-    name:       l.name || 'Unnamed lead',
-    email:      l.email      || '',
-    phone:      l.phone      || '-',
-    company:    l.company    || l.name || '',
-    website:    l.website    || '-',
-    category:   l.industry || l.serviceRequested || 'General',
-    address:    l.address || l.message || '-',
-    rating:     l.rating     || '0',
-    reviews:    l.reviews    || '0',
-    status:     mapLeadStatus(l.status),
-    notes:      l.notes      || '',
-    calledAt:   l.updatedAt  || null,
-    assignedTo: assigned,
-    appointmentAt: l.appointmentAt || null,
-    tags:       l.tags || [],
-    priority:   l.priority || 'normal',
-    campaign:   l.campaign || '',
-    customFields: l.customFields || {},
-    enrichment: l.enrichment || {},
-    source:     l.source     || 'form',
-    raw:        l,
-  }
-}
+// export function normaliseLead(l) {
+//   const assigned = l.assignedTo?.username || l.assignedTo || null
+//   return {
+//     id:         l._id,
+//     name:       l.name || 'Unnamed lead',
+//     email:      l.email      || '',
+//     phone:      l.phone      || '-',
+//     company:    l.company    || l.name || '',
+//     website:    l.website    || '-',
+//     category:   l.industry || l.serviceRequested || 'General',
+//     address:    l.address || l.message || '-',
+//     rating:     l.rating     || '0',
+//     reviews:    l.reviews    || '0',
+//     status:     mapLeadStatus(l.status),
+//     notes:      l.notes      || '',
+//     calledAt:   l.updatedAt  || null,
+//     assignedTo: assigned,
+//     appointmentAt: l.appointmentAt || null,
+//     tags:       l.tags || [],
+//     priority:   l.priority || 'normal',
+//     campaign:   l.campaign || '',
+//     customFields: l.customFields || {},
+//     enrichment: l.enrichment || {},
+//     source:     l.source     || 'form',
+//     raw:        l,
+//   }
+// }
 
 function normaliseCall(c) {
   return {

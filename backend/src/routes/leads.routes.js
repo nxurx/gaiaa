@@ -15,6 +15,7 @@ const {
   assignLeadSchema,
   updateLeadStatusSchema,
   listQuerySchema,
+  bulkImportLeadsSchema,
 } = require('../validators/schemas');
 
 // Public: website form submission
@@ -24,7 +25,7 @@ router.post('/', validate(createLeadSchema), createLead);
 router.use(authenticate);
 
 router.get('/', validate(listQuerySchema), getLeads);
-router.post('/bulk-import', authorize('admin'), bulkImportLeads);
+router.post('/bulk-import', authenticate, validate(bulkImportLeadsSchema), bulkImportLeads);
 router.get('/:id', getLeadById);
 
 router.patch('/:id/assign', authorize('admin'), validate(assignLeadSchema), assignLead);
